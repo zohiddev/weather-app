@@ -1,0 +1,101 @@
+.aside {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+
+    &-header {
+        padding: 32px;
+        height: 300px;
+        &__row {
+            height: 100%;
+            @include flex(flex-start, space-between);
+        }
+
+        &__content {
+            height: 100%;
+            @include flex(flex-start, space-between);
+            flex-direction: column;
+        }
+
+        &__title {
+            font-size: 38px;
+            line-height: 120%;
+            margin-bottom: 8px;
+        }
+
+        &__subtitle {
+            font-size: 18px;
+            color: $gray-color;
+        }
+
+        &__temp {
+            font-size: 62px;
+        }
+
+        &__image {
+            width: 45%;
+            height: 100%;
+            @include center();
+
+            img {
+                // width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &-forecast {
+        flex: 1 1 auto;
+        padding: 24px;
+        background-color: $gray-color;
+        border-radius: 16px;
+        margin-bottom: 24px;
+
+        &__list {
+            width: calc(100vw - 750px);
+            display: flex;
+            overflow-x: scroll;
+        }
+
+        &__title {
+            font-size: 24px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+    }
+
+    &-info {
+        height: 300px;
+        padding: 24px;
+        background-color: $gray-color;
+        border-radius: 16px;
+
+        &__title {
+            font-size: 24px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        &__row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        &__card {
+            width: calc((100% / 2) - 24px);
+        }
+
+        &__text {
+            font-size: 20px;
+            text-transform: capitalize;
+            margin-bottom: 12px;
+        }
+
+        &__temp {
+            padding-left: 12px;
+            font-size: 32px;
+        }
+    }
+}
